@@ -6,10 +6,12 @@ Works with smallest Digital Ocean plans. All you need to do is follow simple ste
 
 Note: I am not affiliated with DigitalOcean, or Facebook. This code is free of charge. I only made it for you to install the server faster and start being creating.
 
+NOT RESPONSIBLE for this code at ALL. Install and use at your own risk!
+
 ### What you get with this install
 - Parse Server
 - Parse Dashboard
-- Mongo Db with Rocks Db Engine (up to 50x performance improvement)
+- Mongo Db with Rocks Storage Engine (up to 50x performance improvement)
 - NGINX (http server)
 - SSL License
 - HTTPS Access
@@ -32,18 +34,7 @@ git clone
 sh /parse-setup.sh
 ```
 
-### What you get with this install
-- Parse Server
-- Parse Dashboard
-- Mongo Db
-- NGINX (http server)
-- SSL License
-- HTTPS Access
-
 You will be asked couple questions along the way. Please answer truthfully :). Once you are through, you will be asked to restart the server. Once restarted, you are all DONE.
-
-
-NOTE: NOT RESPONSIBLE for this code at ALL. Install and use at your own risk.
 
 
 ###NOT WORKING: Dashboard. (Yet) - I don't know why forever-service doesn't want to start it. My other server works with same code but now it doesn't want to start.
