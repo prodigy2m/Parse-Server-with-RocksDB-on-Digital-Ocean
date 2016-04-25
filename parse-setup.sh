@@ -1,7 +1,7 @@
 # Instructions
 # sudo apt-get update
 # sudo apt-get -y install git bc
-# git clone https://github.com/prodigy2m/parse-full-server-setup-digitalocean.git
+# git clone https://github.com/prodigy2m/Parse-Server-with-RocksDB-on-Digital-Ocean.git
 # sh parse-full-server-setup-digitalocean/parse-setup.sh
 # Done
 
@@ -95,7 +95,7 @@ echo -p "Do you have everything you need to start? (y/n)?"
 
 			echo "- Installing Compression Libraries. -"
 			sleep 3
-			sudo apt-get install libbz2-dev libsnappy-dev zlib1g-dev libzlcore-dev # ubuntu
+			sudo apt-get -y install libbz2-dev libsnappy-dev zlib1g-dev libzlcore-dev # ubuntu
 
 			echo "- Installing MongoDb Rocks Branch -"
 			sleep 3
@@ -156,7 +156,7 @@ echo -p "Do you have everything you need to start? (y/n)?"
 						read input
 
 					domain=$input
-					sed 's/domain/'"$input"'/g' /root/parse-full-server-setup-digitalocean/default_sample > /etc/nginx/sites-available/default
+					sed 's/domain/'"$input"'/g' /root/Parse-Server-with-RocksDB-on-Digital-Ocean/default_sample > /etc/nginx/sites-available/default
 					echo "Your SSH for nginx is all setup and done."
 					sleep 2
 
@@ -207,10 +207,10 @@ echo -p "Do you have everything you need to start? (y/n)?"
 			echo "Parse Password (Case sensative):  "
 			read pass
 			sleep 1
-			sed 's/masterid/'"$NEW_ID_MASTER"'/g; s/appid/'"$NEW_ID_CLIENT"'/g; s/domain/'"$input"'/g; s/user-sample/'"$user"'/g; s/pass-sample/'"$pass"'/g' /root/parse-full-server-setup-digitalocean/parse-dashboard-config.json > /root/parse-dashboard/Parse-Dashboard/parse-dashboard-config.json
+			sed 's/masterid/'"$NEW_ID_MASTER"'/g; s/appid/'"$NEW_ID_CLIENT"'/g; s/domain/'"$input"'/g; s/user-sample/'"$user"'/g; s/pass-sample/'"$pass"'/g' /root/Parse-Server-with-RocksDB-on-Digital-Ocean/parse-dashboard-config.json > /root/parse-dashboard/Parse-Dashboard/parse-dashboard-config.json
 
 			# Embed new Generated ID's to Index.js file for Parse Server
-			sed 's/masterid/'"$NEW_ID_MASTER"'/g; s/appid/'"$NEW_ID_CLIENT"'/g' /root/parse-full-server-setup-digitalocean/parse_app_setup.js > /root/parse-server-example/index.js
+			sed 's/masterid/'"$NEW_ID_MASTER"'/g; s/appid/'"$NEW_ID_CLIENT"'/g' /root/Parse-Server-with-RocksDB-on-Digital-Ocean/parse_app_setup.js > /root/parse-server-example/index.js
 
 			echo "- Creating First MongoDb Entry -"
 			sleep 2
@@ -221,7 +221,7 @@ echo -p "Do you have everything you need to start? (y/n)?"
 				http://localhost:1337/parse/classes/GameScore
 
 			echo "------------------------------------------------------------------"
-			echo "$############# IMPORTANT - WRITE THIS DOWN  ######################"
+			echo "############## IMPORTANT - WRITE THIS DOWN  ######################"
 			echo " ---- MASTER KEY (Keep this private): $NEW_ID_MASTER"
 			echo " ---- CLIENT KEY: $NEW_ID_CLIENT"
 			echo ""
@@ -230,7 +230,7 @@ echo -p "Do you have everything you need to start? (y/n)?"
 			echo " - Parse Server: https://$input/parse"
 			echo " - Parse LiveQuery Server: ws://$input:1337"
 			echo ""
-			echo "$################ GOOD LUCK BUILDING STUFF  ######################"
+			echo "################# GOOD LUCK BUILDING STUFF  ######################"
 			echo "------------------------------------------------------------------"
 
 			sleep 5

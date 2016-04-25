@@ -1,10 +1,10 @@
 # NOT WORKING YET - DO NOT USE!!!
 
-# Digital Ocean + Parse Server =  Go Prototype
+# Digital Ocean + Parse Server =  Prototype Heaven
 
 Works with smallest Digital Ocean plans. All you need to do is follow simple step-by-step instructions.
 
-Note: I am not affiliated with DigitalOcean, or Facebook. This code is free of charge. I only made it for you to install the server faster and start being creating.
+Note: I am not affiliated with DigitalOcean, or Facebook. This code is free of charge. I only made it for you to install the server faster and start being creative.
 
 NOT RESPONSIBLE for this code at ALL. Install and use at your own risk!
 
@@ -17,8 +17,8 @@ NOT RESPONSIBLE for this code at ALL. Install and use at your own risk!
 - HTTPS Access
 
 ####Parse Server Information
--- Parse Details: https://parse.com/
--- Parse GitHub: https://parseplatform.github.io/
+- Parse Details: https://parse.com/
+- Parse GitHub: https://parseplatform.github.io/
 
 ### Prerequisites
 
@@ -31,7 +31,7 @@ NOT RESPONSIBLE for this code at ALL. Install and use at your own risk!
 sudo apt-get update
 sudo apt-get -y install git bc
 git clone https://github.com/prodigy2m/Parse-Server-with-RocksDB-on-Digital-Ocean.git
-sh /parse-setup.sh
+sh Parse-Server-with-RocksDB-on-Digital-Ocean/parse-setup.sh
 ```
 
 You will be asked couple questions along the way. Please answer truthfully :). Once you are through, you will be asked to restart the server. Once restarted, you are all DONE.
