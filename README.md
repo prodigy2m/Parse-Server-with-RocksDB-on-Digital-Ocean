@@ -2,7 +2,7 @@
 
 # Digital Ocean + Parse Server =  Go Prototype
 
-![alt text](https://github.com/prodigy2m/Parse-Server-with-RocksDB-on-Digital-Ocean/blob/master/digitalocean-logo.jpg "Digital Ocean") + ![alt text](https://github.com/prodigy2m/Parse-Server-with-RocksDB-on-Digital-Ocean/blob/master/Parse-Logo.png "Parse Logo") = PROTOTYPE HEAVEN
+![alt text](https://github.com/prodigy2m/Parse-Server-with-RocksDB-on-Digital-Ocean/blob/master/digitalocean-logo.jpg "Digital Ocean") #+ ![alt text](https://github.com/prodigy2m/Parse-Server-with-RocksDB-on-Digital-Ocean/blob/master/Parse-Logo.png "Parse Logo") = PROTOTYPE HEAVEN
 
 Works with smallest Digital Ocean plans. All you need to do is follow simple step-by-step instructions.
 
