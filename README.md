@@ -14,7 +14,7 @@ Note: I am not affiliated with DigitalOcean, or Facebook. This code is free of c
 - SSL License
 - HTTPS Access
 
-- Parse Server
+####Parse Server Information
 -- Parse Details: https://parse.com/
 -- Parse GitHub: https://parseplatform.github.io/
 
