@@ -1,12 +1,24 @@
-# Digital Ocean - Parse Server Setup Automation (Parse Server, Parse Dashboard, MongoDb, SSL license, HTTPS Access, NGINX HTTP Server) 
+# NOT WORKING YET - DO NOT USE!!!
 
-- Parse Server 
+# Digital Ocean + Parse Server =  Go Prototype
+
+[logo]: https://github.com/prodigy2m/Parse-Server-with-RocksDB-on-Digital-Ocean/blob/master/digitalocean-logo.jpg "Digital Ocean" + [logo]: https://github.com/prodigy2m/Parse-Server-with-RocksDB-on-Digital-Ocean/blob/master/Parse-Logo.png "Parse Logo" = PROTOTYPE HEAVEN
+
+Works with smallest Digital Ocean plans. All you need to do is follow simple step-by-step instructions.
+
+Note: I am not affiliated with DigitalOcean, or Facebook. This code is free of charge. I only made it for you to install the server faster and start being creating.
+
+### What you get with this install
+- Parse Server
+- Parse Dashboard
+- Mongo Db with Rocks Db Engine (up to 50x performance improvement)
+- NGINX (http server)
+- SSL License
+- HTTPS Access
+
+- Parse Server
 -- Parse Details: https://parse.com/
 -- Parse GitHub: https://parseplatform.github.io/
-
-## Digital Ocean + Parse Server =  Go Prototype faster
-
-Works with smallest Digital Ocean plans. You need to follow the instructions. Simple steps.
 
 ### Prerequisites
 
@@ -18,8 +30,8 @@ Works with smallest Digital Ocean plans. You need to follow the instructions. Si
 ```
 sudo apt-get update
 sudo apt-get -y install git bc
-git clone https://github.com/prodigy2m/parse-full-server-setup-digitalocean.git
-sh parse-full-server-setup-digitalocean/parse-setup.sh
+git clone
+sh /parse-setup.sh
 ```
 
 ### What you get with this install
