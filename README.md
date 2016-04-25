@@ -30,7 +30,7 @@ NOT RESPONSIBLE for this code at ALL. Install and use at your own risk!
 ```
 sudo apt-get update
 sudo apt-get -y install git bc
-git clone
+git clone https://github.com/prodigy2m/Parse-Server-with-RocksDB-on-Digital-Ocean.git
 sh /parse-setup.sh
 ```
 
