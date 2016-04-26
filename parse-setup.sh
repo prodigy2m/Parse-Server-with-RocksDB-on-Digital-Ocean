@@ -37,8 +37,8 @@ echo -p "Do you have everything you need to start? (y/n)?"
 			echo "This section is for creating SWAP memory for smallest servers in DigitalOcean"
 			echo ""
 			echo "Are you using the CHEAPEST DigitalOcean Plan? (y/n)? "
-				read choice
-				case $choice in
+				read swap
+				case $swap in
 					y)
 						echo "Creating SWAP memory"
 						sudo fallocate -l 4G /swapfile
@@ -83,32 +83,34 @@ echo -p "Do you have everything you need to start? (y/n)?"
 			# sleep 1
 			# sudo npm install ws
 
-			# echo "- Installing MongoDb Org. -"
-			# sleep 1
-			# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-			# echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
-			# sudo apt-get -y update
-			# sudo apt-get -y install mongodb-org
-			# service mongod status
-
+			# More information regarding RocksDb Engine for MongoDb
+			# https://github.com/mongodb-partners/mongo-rocks
 			# Took from http://blog.parse.com/announcements/mongodb-rocksdb-parse/
+			# https://gist.github.com/franciscocpg/a1268f500b1d1482dd88
 
-			echo "- Installing Compression Libraries. -"
+			echo "- Installing Compression Libraries and Scons. -"
 			sleep 3
-			sudo apt-get -y install libbz2-dev libsnappy-dev zlib1g-dev libzlcore-dev # ubuntu
+			sudo apt-get -y install libbz2-dev libsnappy-dev zlib1g-dev libzlcore-dev scons make
+
+			echo "- Installing Essentials. -"
+			sleep 1
+			sudo apt-get -y install build-essential
 
 			echo "- Installing MongoDb Rocks Branch -"
 			sleep 3
+			# get rocksdb
 			git clone https://github.com/facebook/rocksdb.git
-			cd rocksdb
-			git checkout mongorocks
-			make static_lib
-			sudo make install
-			sleep 3
+			# compile rocksdb
+			cd rocksdb; make static_lib; sudo INSTALL_PATH=/usr make install; cd ..
+			# get mongo
 			git clone https://github.com/mongodb-partners/mongo.git
+
 			cd mongo
-			git checkout v3.0-mongorocks
+			# Switch to this version of MongoDbRocksDb - To check for latest: git branch -a
+			git checkout v3.0.8-mongorocks
+			# get mongorocks
 			scons mongod mongo mongos --rocksdb=1
+
 
 			echo " ############### PARSE INSTALL #################"
 			sleep 5
@@ -238,7 +240,7 @@ echo -p "Do you have everything you need to start? (y/n)?"
 			echo -p "Do you have everything you need to start? (y/n)?"
 				read restart_this
 
-				case $choice in
+				case $restart_this in
 					y)
 						echo "Rebooting now";
 						reboot
